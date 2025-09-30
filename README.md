@@ -2,9 +2,7 @@
 
 <div align="center">
 
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white) ![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white) ![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white)
 
 **Advanced Data Analytics Dashboard built with R and Shiny**
 
@@ -53,10 +51,14 @@ R-Data-Analytics-Dashboard/
 ├── main.R                    # Main analysis pipeline
 ├── dashboard.R               # Interactive Shiny dashboard
 ├── statistical_analysis.R    # Advanced statistical methods
-├── plots/                    # Generated visualizations
-├── reports/                  # Generated reports
+├── plots/                    # Generated visualizations (see plots/README.md)
+├── reports/                  # Generated reports (see reports/README.md)
+├── .gitignore                # Git ignore rules
+├── LICENSE                   # MIT License file
 └── README.md                 # This file
 ```
+
+> **Note:** The `plots/` and `reports/` directories contain their own README.md files with detailed information about their contents and usage.
 
 ### 📊 Modules
 
@@ -160,10 +162,14 @@ R-Data-Analytics-Dashboard/
 ├── main.R                    # Pipeline principal de análise
 ├── dashboard.R               # Dashboard interativo Shiny
 ├── statistical_analysis.R    # Métodos estatísticos avançados
-├── plots/                    # Visualizações geradas
-├── reports/                  # Relatórios gerados
+├── plots/                    # Visualizações geradas (veja plots/README.md)
+├── reports/                  # Relatórios gerados (veja reports/README.md)
+├── .gitignore                # Regras de ignore do Git
+├── LICENSE                   # Arquivo de licença MIT
 └── README.md                 # Este arquivo
 ```
+
+> **Nota:** Os diretórios `plots/` e `reports/` contêm seus próprios arquivos README.md com informações detalhadas sobre seus conteúdos e uso.
 
 ### 📊 Módulos
 
@@ -238,7 +244,11 @@ generate_statistical_report(data)
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the **MIT License**.
+
+For complete license terms and conditions, please refer to the [LICENSE](LICENSE) file in the root directory of this project.
+
+Copyright (c) 2025 Gabriel Demetrios Lafis
 
 ---
 
