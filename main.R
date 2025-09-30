@@ -10,7 +10,17 @@ library(dplyr)
 library(plotly)
 library(DT)
 
-# Generate sample data
+# Source statistical analysis module if available
+if (file.exists("statistical_analysis.R")) {
+  source("statistical_analysis.R")
+}
+
+# ============================================
+# DATA GENERATION AND PROCESSING
+# ============================================
+
+#' Generate sample data for the dashboard
+#' @author Gabriel Demetrios Lafis
 generate_sample_data <- function() {
   set.seed(123)
   data.frame(
@@ -22,7 +32,10 @@ generate_sample_data <- function() {
   )
 }
 
-# Data processing functions
+#' Process sales data by region
+#' @param data Data frame of raw data
+#' @return Summary by region
+#' @author Gabriel Demetrios Lafis
 process_sales_data <- function(data) {
   data %>%
     group_by(region) %>%
@@ -33,7 +46,14 @@ process_sales_data <- function(data) {
     )
 }
 
-# Visualization functions
+# ============================================
+# VISUALIZATION HELPERS
+# ============================================
+
+#' Create sales trend plot using ggplot2
+#' @param data Data frame with date and sales
+#' @return ggplot object
+#' @author Gabriel Demetrios Lafis
 create_sales_plot <- function(data) {
   ggplot(data, aes(x = date, y = sales)) +
     geom_line(color = "#2E86AB", size = 1) +
@@ -52,32 +72,70 @@ create_sales_plot <- function(data) {
     )
 }
 
-# Main execution
+# ============================================
+# MAIN EXECUTION PIPELINE
+# ============================================
+
+#' Main entry point for batch analysis and reporting
+#' - Generates data
+#' - Runs processing, ML, and statistical analyses
+#' - Saves plots and generates reports
+#' @author Gabriel Demetrios Lafis
 main <- function() {
-  cat("🚀 Starting Data Analytics Dashboard\n")
+  cat("🚀 Starting Data Analytics Pipeline\n")
   cat("👨‍💻 Created by Gabriel Demetrios Lafis\n\n")
-  
+
   # Generate and process data
   raw_data <- generate_sample_data()
   processed_data <- process_sales_data(raw_data)
-  
+
   # Create visualizations
   sales_plot <- create_sales_plot(raw_data)
-  
+
+  # Ensure plots directory exists
+  if (!dir.exists("plots")) dir.create("plots")
+
   # Save plots
   ggsave("plots/sales_trend.png", sales_plot, width = 12, height = 8, dpi = 300)
-  
+
+  # Optional: Advanced statistical analysis and ML if module is available
+  if (exists("perform_time_series_analysis")) {
+    ts_results <- perform_time_series_analysis(raw_data)
+    cat("\n🔮 ARIMA 30-day forecast created.\n")
+  }
+
+  if (exists("perform_clustering")) {
+    km <- perform_clustering(raw_data, centers = 3)
+    cat("\n🧩 K-means clustering completed.\n")
+  }
+
+  if (exists("build_predictive_model")) {
+    ml_rf <- build_predictive_model(raw_data, method = "rf")
+    cat("\n🤖 Random Forest model trained. Metrics:\n")
+    print(ml_rf$metrics)
+  }
+
+  if (exists("perform_correlation_analysis")) {
+    cor_mat <- perform_correlation_analysis(raw_data)
+    cat("\n🔗 Correlation analysis computed.\n")
+  }
+
+  if (exists("generate_statistical_report")) {
+    report_path <- generate_statistical_report(raw_data)
+    cat("\n📝 Report generated at:", report_path, "\n")
+  }
+
   # Print summary statistics
-  cat("📊 Data Summary:\n")
+  cat("\n📊 Data Summary:\n")
   print(summary(raw_data))
-  
+
   cat("\n📈 Regional Analysis:\n")
   print(processed_data)
-  
-  cat("\n✅ Analysis complete! Check plots/ directory for visualizations.\n")
+
+  cat("\n✅ Analysis complete! Check plots/ and reports/ directories.\n")
 }
 
-# Run main function
+# Run main function when executed non-interactively
 if (!interactive()) {
   main()
 }
