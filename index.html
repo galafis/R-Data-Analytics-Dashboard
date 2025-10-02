@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Data Analytics Dashboard - Gabriel Demetrios Lafis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>R Data Analytics Dashboard</h1>
+            <p>Um dashboard abrangente de análise de dados construído com R e Shiny.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="https://github.com/galafis/R-Data-Analytics-Dashboard" target="_blank">Repositório no GitHub</a></li>
+                <li><a href="#overview">Visão Geral</a></li>
+                <li><a href="#features">Funcionalidades</a></li>
+                <li><a href="#quick-start">Início Rápido</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="overview" class="container">
+            <h2>Visão Geral</h2>
+            <p>Este projeto apresenta um dashboard de análise de dados robusto, desenvolvido em R e Shiny, focado em análise estatística avançada, visualizações interativas e capacidades de Machine Learning. É uma ferramenta poderosa para explorar e entender conjuntos de dados complexos, demonstrando a aplicação de técnicas de ciência de dados em um ambiente interativo.</p>
+        </section>
+
+        <section id="features" class="container">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li>📊 <strong>Visualizações Interativas</strong>: Gráficos e plots dinâmicos criados com <code>ggplot2</code> e <code>plotly</code> para uma exploração de dados intuitiva.</li>
+                <li>🤖 <strong>Machine Learning</strong>: Implementação de modelos preditivos (como Random Forest e SVM) e algoritmos de clustering para identificar padrões.</li>
+                <li>📈 <strong>Análise Estatística</strong>: Uso de métodos estatísticos avançados, incluindo análise de séries temporais e testes de hipóteses.</li>
+                <li>📱 <strong>Dashboard Responsivo</strong>: Interface interativa e amigável construída com <code>Shiny</code>, acessível em diferentes dispositivos.</li>
+                <li>📋 <strong>Relatórios Automatizados</strong>: Capacidade de gerar relatórios detalhados a partir das análises realizadas.</li>
+            </ul>
+        </section>
+
+        <section id="quick-start" class="container">
+            <h2>Início Rápido</h2>
+            <p>Para executar o dashboard e a análise em seu ambiente local, siga os passos abaixo. Certifique-se de ter o R e o RStudio instalados.</p>
+            <pre><code># 1. Clone o repositório
+git clone https://github.com/galafis/R-Data-Analytics-Dashboard.git
+cd R-Data-Analytics-Dashboard
+
+# 2. Instale as dependências no R
+# Abra o console do R e execute:
+R -e "install.packages(c(\'shiny\', \'shinydashboard\', \'ggplot2\', \'dplyr\', \'plotly\', \'DT\', \'forecast\', \'corrplot\', \'cluster\', \'caret\', \'randomForest\', \'e1071\'))"
+
+# 3. Execute o pipeline de análise principal
+# Este script irá gerar os dados e visualizações iniciais.
+Rscript main.R
+
+# 4. Inicie o dashboard interativo
+# O dashboard será aberto em seu navegador padrão.
+R -e "shiny::runApp(\'dashboard.R\')"</code></pre>
+        </section>
+
+        <section id="author" class="container">
+            <h2>Autor</h2>
+            <p>Desenvolvido com dedicação por <strong>Gabriel Demetrios Lafis</strong>.</p>
+            <p>Conecte-se e explore outros projetos no <a href="https://github.com/galafis" target="_blank">GitHub</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright &copy; 2025 Gabriel Demetrios Lafis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
