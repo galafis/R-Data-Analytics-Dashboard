@@ -12,6 +12,14 @@
 
 ---
 
+## 🖼️ Hero Image
+
+<!-- Placeholder for the hero image. A new hero image could not be generated at this time. -->
+
+![Hero Image Placeholder](https://via.placeholder.com/1200x400?text=R+Data+Analytics+Dashboard+Hero+Image)
+
+---
+
 ## 🇺🇸 English
 
 ### 📋 Overview
@@ -35,13 +43,13 @@ git clone https://github.com/galafis/R-Data-Analytics-Dashboard.git
 cd R-Data-Analytics-Dashboard
 
 # Install required packages
-R -e "install.packages(c('shiny', 'shinydashboard', 'ggplot2', 'dplyr', 'plotly', 'DT', 'forecast', 'corrplot', 'cluster', 'caret', 'randomForest', 'e1071'))"
+R -e "install.packages(c(\'shiny\', \'shinydashboard\', \'ggplot2\', \'dplyr\', \'plotly\', \'DT\', \'forecast\', \'corrplot\', \'cluster\', \'caret\', \'randomForest\', \'e1071\'))"
 
 # Run analysis
 Rscript main.R
 
 # Start Shiny dashboard
-R -e "shiny::runApp('dashboard.R')"
+R -e "shiny::runApp(\'dashboard.R\')"
 ```
 
 ### 📁 Project Structure
@@ -83,23 +91,26 @@ R-Data-Analytics-Dashboard/
 ### 🎯 Usage Examples
 
 **Run complete analysis pipeline:**
+
 ```R
 Rscript main.R
 ```
 
 **Launch interactive dashboard:**
+
 ```R
-R -e "shiny::runApp('dashboard.R')"
+R -e "shiny::runApp(\'dashboard.R\')"
 ```
 
 **Use statistical module:**
+
 ```R
-source('main.R')
-source('statistical_analysis.R')
+source(\'main.R\')
+source(\'statistical_analysis.R\')
 
 data <- generate_sample_data()
 ts_results <- perform_time_series_analysis(data)
-ml_model <- build_predictive_model(data, method = 'rf')
+ml_model <- build_predictive_model(data, method = \'rf\')
 generate_statistical_report(data)
 ```
 
@@ -146,13 +157,13 @@ git clone https://github.com/galafis/R-Data-Analytics-Dashboard.git
 cd R-Data-Analytics-Dashboard
 
 # Instalar pacotes necessários
-R -e "install.packages(c('shiny', 'shinydashboard', 'ggplot2', 'dplyr', 'plotly', 'DT', 'forecast', 'corrplot', 'cluster', 'caret', 'randomForest', 'e1071'))"
+R -e "install.packages(c(\'shiny\', \'shinydashboard\', \'ggplot2\', \'dplyr\', \'plotly\', \'DT\', \'forecast\', \'corrplot\', \'cluster\', \'caret\', \'randomForest\', \'e1071\'))"
 
 # Executar análise
 Rscript main.R
 
 # Iniciar dashboard Shiny
-R -e "shiny::runApp('dashboard.R')"
+R -e "shiny::runApp(\'dashboard.R\')"
 ```
 
 ### 📁 Estrutura do Projeto
@@ -194,23 +205,26 @@ R-Data-Analytics-Dashboard/
 ### 🎯 Exemplos de Uso
 
 **Executar pipeline completo de análise:**
+
 ```R
 Rscript main.R
 ```
 
 **Iniciar dashboard interativo:**
+
 ```R
-R -e "shiny::runApp('dashboard.R')"
+R -e "shiny::runApp(\'dashboard.R\')"
 ```
 
 **Usar módulo estatístico:**
+
 ```R
-source('main.R')
-source('statistical_analysis.R')
+source(\'main.R\')
+source(\'statistical_analysis.R\')
 
 data <- generate_sample_data()
 ts_results <- perform_time_series_analysis(data)
-ml_model <- build_predictive_model(data, method = 'rf')
+ml_model <- build_predictive_model(data, method = \'rf\')
 generate_statistical_report(data)
 ```
 
@@ -257,3 +271,4 @@ Copyright (c) 2025 Gabriel Demetrios Lafis
 **Made with ❤️ by Gabriel Demetrios Lafis**
 
 </div>
+
